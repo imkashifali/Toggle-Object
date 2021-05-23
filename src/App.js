@@ -1,6 +1,7 @@
 import FormHandling from './components/FormHandling';
 import { useState } from 'react';
 import Cruds from './components/Cruds';
+import GithubAppi from './components/GithubAppi';
 
 function App() {
 
@@ -9,7 +10,8 @@ function App() {
       <h1>welcome</h1>
       {/* <FormHandling/> */}
 
-      <Cruds />
+      {/* <Cruds /> */}
+      <GithubAppi/>
 
     </div>
   );
