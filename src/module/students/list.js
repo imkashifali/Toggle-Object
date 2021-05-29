@@ -12,7 +12,7 @@ function list({student, index, deleteRecord, updateRecord}) {
                 <td>{student.batch}</td>
                 <td>{student.roll}</td>
                 <td>
-                    <button onClick={()=> deleteRecord(index)}>Delete</button>
+                    <button onClick={()=> deleteRecord(index)}>aaDelete</button>
                 </td>
                 <td>
                     <button onClick={()=> updateRecord(student,index)}>update</button>
