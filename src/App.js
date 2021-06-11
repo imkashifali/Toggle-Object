@@ -1,39 +1,17 @@
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import DefaultLayout from "./layout/DefaultLayout";
-import DashboardPage from "./page/dashboard/DashboardPage";
-import EntryPage from "./page/entry/EntryPage";
-import AddTicket from "./page/newTicket/AddTicket";
-import Ticket from "./page/ticket/Ticket";
-import TicketListing from "./page/ticketListing/TicketListing";
-import PrivateRoute from "./components/private-route/PrivateRoute";
+import React,{useState} from 'react'
+import Testing from "./component/testing";
+import Effet from "./component/effet";
+
 function App() {
+  const [num, setNum] = useState(0);
+
   return (
     <div className="app">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <EntryPage />
-          </Route>
-          <PrivateRoute path="/dashboardPage">
-            <DashboardPage />
-          </PrivateRoute>
+      {num}
+      {/* <Testing /> */}
+      <Effet />
+      <button onClick={()=> setNum(num+1)}>Increase</button>
 
-          <PrivateRoute path="/add-ticket">
-            <AddTicket />
-          </PrivateRoute>
-
-          <PrivateRoute path="/tickets">
-            <TicketListing />
-          </PrivateRoute>
-
-          <PrivateRoute path="/ticket/:tId">
-            <Ticket />
-          </PrivateRoute>
-
-
-        </Switch>
-      </Router>
     </div>
   );
 }
