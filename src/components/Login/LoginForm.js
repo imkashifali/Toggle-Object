@@ -56,11 +56,11 @@ const LoginForm = ({formSwitcher,handleOnSubmit, handleOnchange, email, pass }) 
           <a href="#" onClick={ () => formSwitcher('reset')}>Forget Password?</a>
         </Col>
       </Row>
-      <Row className="py-4">
+      {/* <Row className="py-4">
         <Col>
           Are you new here? <a href="/registration">Register Now</a>
         </Col>
-      </Row>
+      </Row> */}
     </Container>
   );
 };
